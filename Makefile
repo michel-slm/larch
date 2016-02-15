@@ -23,7 +23,7 @@ fsck-larch.1: fsck-larch.1.in fsck-larch
 
 check:
 	python -m CoverageTestRunner --ignore-missing-from=without-tests
-	rm .coverage
+	rm -f .coverage
 	./insert-remove-test tempdir 100
 	rm -r tempdir larch.log
 	cmdtest tests
